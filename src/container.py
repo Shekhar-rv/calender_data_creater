@@ -1,19 +1,27 @@
-from psycopg2 import connect
-from psycopg2.extensions import connection
+from web_crawler import WebCrawler
+from os import environ
+
+HOUSE_NUMBER = environ.get('HOUSE_NUMBER', '1')
+STREET_NAME = environ.get('STREET_NAME', 'Test Street')
+CITY = environ.get('CITY', 'Test City')
+POSTCODE = environ.get('POSTCODE', 'TE1 1ST')
+WEBSITE_URL = environ.get('WEBSITE_URL')
 
 
-postgres_connection = None
+def address_str_generator(house_number: str, street_name: str, city: str, postcode: str) -> str:
+    return f"{house_number} {street_name}, {city}, {postcode}"
 
-def get_pg_connection(postgres_uri: str) -> connection:
-    global postgres_connection
-    if postgres_connection is None:
-        print("Establishing connection...")
-        pg_uri = postgres_uri.split("?schema")[0]
-        try:        
-            postgres_connection = connect(pg_uri)
-            postgres_connection.autocommit = True
-            print("Connection established!")
-        except Exception as e:
-            print("Error: Could not establish connection")
-            print(e)
-    return postgres_connection
+def get_address_str() -> str:
+    return address_str_generator(
+        house_number=HOUSE_NUMBER,
+        street_name=STREET_NAME,
+        city=CITY,
+        postcode=POSTCODE
+    )
+
+def get_webcrawler() -> WebCrawler:
+    return WebCrawler(
+        website_url=WEBSITE_URL,
+        postcode=POSTCODE,
+        address_str=get_address_str()
+    )

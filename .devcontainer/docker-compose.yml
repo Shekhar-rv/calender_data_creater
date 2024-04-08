@@ -1,7 +1,8 @@
 version: "3.9"
 
+services:
   python:
-    container_name: python
+    container_name: python_cdc
     build:
       dockerfile: ./.devcontainer/Dockerfile.cdc_project
       context: ../
@@ -11,7 +12,11 @@ version: "3.9"
       - default
     tty: true
     environment:
-      - POSTGRES_URI=postgresql://postgres:postgres@172.19.0.2:5432/data_pipeline?schema=public
+      - POSTCODE=S6 2XF
+      - STREET_NAME=Palm Street
+      - HOUSE_NUMBER=57
+      - CITY=Sheffield
+      - WEBSITE_URL=https://wasteservices.sheffield.gov.uk/
       - ENVIRONMENT=local
     extra_hosts:
       - "host.docker.internal:host-gateway"

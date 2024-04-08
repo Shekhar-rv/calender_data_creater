@@ -1,6 +1,14 @@
 FROM python:3.11-bullseye
 
+RUN apt-get install -y curl
+
+RUN curl -fsSLo /usr/share/keyrings/brave-browser-beta-archive-keyring.gpg https://brave-browser-apt-beta.s3.brave.com/brave-browser-beta-archive-keyring.gpg
+
+RUN echo "deb [signed-by=/usr/share/keyrings/brave-browser-beta-archive-keyring.gpg] https://brave-browser-apt-beta.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-beta.list
+
 RUN apt-get update
+
+RUN apt-get install -y brave-browser-beta
 
 RUN mkdir -p /cdc_project
 WORKDIR /cdc_project
