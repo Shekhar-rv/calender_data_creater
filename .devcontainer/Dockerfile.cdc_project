@@ -1,14 +1,24 @@
 FROM python:3.11-bullseye
 
-RUN apt-get install -y curl
+# Install Curl and Unzip
+RUN apt-get install -y curl unzip
 
+# Install dependencies for Brave Browser
 RUN curl -fsSLo /usr/share/keyrings/brave-browser-beta-archive-keyring.gpg https://brave-browser-apt-beta.s3.brave.com/brave-browser-beta-archive-keyring.gpg
 
 RUN echo "deb [signed-by=/usr/share/keyrings/brave-browser-beta-archive-keyring.gpg] https://brave-browser-apt-beta.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-beta.list
 
 RUN apt-get update
 
+# Install Brave Browser
 RUN apt-get install -y brave-browser-beta
+
+# Download and unzip the latest version of the chromedriver
+RUN curl -o /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+
+# Unzip the file to the desired location
+RUN unzip /tmp/chromedriver.zip -d /usr/local/bin/
+
 
 RUN mkdir -p /cdc_project
 WORKDIR /cdc_project

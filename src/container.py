@@ -1,11 +1,13 @@
 from web_crawler import WebCrawler
 from os import environ
 
-HOUSE_NUMBER = environ.get('HOUSE_NUMBER', '1')
-STREET_NAME = environ.get('STREET_NAME', 'Test Street')
+HOUSE_NUMBER = environ.get('HOUSE_NUMBER', '')
+STREET_NAME = environ.get('STREET_NAME', '')
 CITY = environ.get('CITY', 'Test City')
-POSTCODE = environ.get('POSTCODE', 'TE1 1ST')
-WEBSITE_URL = environ.get('WEBSITE_URL')
+POSTCODE = environ.get('POSTCODE', '')
+WEBSITE_URL = environ.get('WEBSITE_URL', '')
+BROWSER_PATH = environ.get('BROWSER_PATH', '')
+DRIVER_PATH = environ.get('DRIVER_PATH', '')
 
 
 def address_str_generator(house_number: str, street_name: str, city: str, postcode: str) -> str:
@@ -23,5 +25,7 @@ def get_webcrawler() -> WebCrawler:
     return WebCrawler(
         website_url=WEBSITE_URL,
         postcode=POSTCODE,
-        address_str=get_address_str()
+        address_str=get_address_str(),
+        browser_path=BROWSER_PATH,
+        driver_path=DRIVER_PATH
     )

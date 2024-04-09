@@ -17,6 +17,8 @@ services:
       - HOUSE_NUMBER=57
       - CITY=Sheffield
       - WEBSITE_URL=https://wasteservices.sheffield.gov.uk/
+      - BROWSER_PATH=/usr/bin/brave-browser
+      - DRIVER_PATH=/usr/local/bin/chromedriver
       - ENVIRONMENT=local
     extra_hosts:
       - "host.docker.internal:host-gateway"
