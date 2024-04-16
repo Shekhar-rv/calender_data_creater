@@ -16,7 +16,7 @@ services:
       - STREET_NAME=Palm Street
       - HOUSE_NUMBER=57
       - CITY=Sheffield
-      - WEBSITE_URL=https://wasteservices.sheffield.gov.uk/
+      - WEBSITE_URL=https://wasteservices.sheffield.gov.uk
       - ENVIRONMENT=local
     extra_hosts:
       - "host.docker.internal:host-gateway"
