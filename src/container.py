@@ -1,4 +1,5 @@
 from web_crawler import WebCrawler
+from web_scraper import WebScraper
 from os import environ
 
 HOUSE_NUMBER = environ.get('HOUSE_NUMBER', '')
@@ -11,6 +12,7 @@ WEBSITE_URL = environ.get('WEBSITE_URL', '')
 def address_str_generator(house_number: str, street_name: str, city: str, postcode: str) -> str:
     return f"{house_number} {street_name}, {city}, {postcode}"
 
+
 def get_address_str() -> str:
     return address_str_generator(
         house_number=HOUSE_NUMBER,
@@ -19,9 +21,14 @@ def get_address_str() -> str:
         postcode=POSTCODE
     )
 
+
 def get_webcrawler() -> WebCrawler:
     return WebCrawler(
         website_url=WEBSITE_URL,
         postcode=POSTCODE,
         address_str=get_address_str()
     )
+
+
+def get_webscraper() -> WebScraper:
+    return WebScraper(html_file="data/page_source.html")

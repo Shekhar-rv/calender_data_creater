@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Your Calendar | Sheffield County Council Bins</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32549068-7"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-32549068-7');
+	</script>
+
+
+	<link rel="stylesheet" href="/system/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/system/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/system/css/main.min.css">
+	<style>
+		@keyframes pulse {
+			0% {
+				opacity: 1;
+				content: "Loading";
+			}
+
+			10% {
+				opacity: 0.5;
+			}
+
+			20% {
+				opacity: 1;
+				content: "» Loading «";
+			}
+
+			30% {
+				opacity: 0.5;
+			}
+
+			40% {
+				opacity: 1;
+				content: "»» Loading ««";
+			}
+
+			50% {
+				opacity: 0.5;
+			}
+
+			60% {
+				opacity: 1;
+				content: "»»» Loading «««";
+			}
+
+			70% {
+				opacity: 0.5;
+			}
+
+			80% {
+				opacity: 1;
+				content: "»»»» Loading ««««";
+			}
+
+			90% {
+				opacity: 0.5;
+			}
+
+			100% {
+				opacity: 1;
+				content: "»»»»» Loading «««««";
+			}
+		}
+	</style>
+	<link rel="stylesheet" href="/cl/css/fonts.css">
+	<link rel="stylesheet" href="/cl/css/sheffield.css">
+	<link rel="stylesheet" href="/cl/css/calendar.css">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<script src="/system/js/vendor/bootstrap.min.js"></script>
+	<script async defer src='https://www.google.com/recaptcha/api.js?onload=captcha_onload&render=explicit'></script>
+	<script src="/system/js/main.js"></script>
+	<script src="/cl/js/main.js"></script>
+</head>
+
+<body class="page-property " onunload="">
+	<a href="#main" class="direct bypass-block-link visually-hidden visible-when-focused">Skip Navigation</a>
+	<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+	<header class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<ul>
+					<li class="sheffield-logo-wrapper"><a href="https://www.sheffield.gov.uk"><img
+								src="/cl/img/logo.png" alt="Sheffield" id="sheffield-logo"></a></li>
+					<li class="veolia-logo-wrapper"><img src="/cl/img/service-logo.png" alt="Veolia" id="veolia-logo">
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="main-wrapper">
+		<div class="title-wrapper">
+			<div class="container">
+				<h1>Your Calendar</h1>
+			</div>
+		</div>
+		<div id="main">
+			<div class="container message-area-wrapper">
+				<div class="message-area"></div>
+			</div>
+			<div class="container results-calendar-wrapper">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="property-address"><strong>Property Address</strong>: 57 Palm Street, Sheffield, S6
+							2XF <a href="/" class="change-address">Change Address</a>
+							<div class="calendar-button">
+								<a class="btn btn-link" href="/property/100051048838">View
+									my Services</a>
+							</div>
+						</div>
+
+						<div class="button-wrapper" style="text-align: center">
+							<a target="_blank" class="btn-link btn"
+								href="/property/100051048838/calendar?hdl=57eaa9b4&amp;pdf=t">Print / Download</a>
+						</div>
+
+						<div class="outer-calendar">
+							<h2><span>Collection Calendar:</span> May 2024 - Apr 2025</h2>
+							<div class="calendar">
+								<div class="month-wrapper month-item-1 month-collapse month-5 month-odd year-2024">
+									<h3 class="month">May 2024</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-5 item-count-5 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 1, May 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 1, May 2024 - Brown Bin"
+															class="calendar-task-495">1</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 8, May 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 8, May 2024 - Black Bin"
+															class="calendar-task-1">8</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 15, May 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 15, May 2024 - Blue Bin"
+															class="calendar-task-496">15</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 22, May 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 22, May 2024 - Black Bin"
+															class="calendar-task-1">22</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-5 past-date" tabindex="0"
+													title="Wednesday 29, May 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 29, May 2024 - Brown Bin"
+															class="calendar-task-495">29</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="month-wrapper month-item-2 month-collapse month-6 month-even year-2024">
+									<h3 class="month">Jun 2024</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-4 item-count-4 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 5, June 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 5, June 2024 - Black Bin"
+															class="calendar-task-1">5</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 12, June 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 12, June 2024 - Blue Bin"
+															class="calendar-task-496">12</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 19, June 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 19, June 2024 - Black Bin"
+															class="calendar-task-1">19</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 26, June 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 26, June 2024 - Brown Bin"
+															class="calendar-task-495">26</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="month-wrapper month-item-3 month-collapse month-7 month-odd year-2024">
+									<h3 class="month">Jul 2024</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-5 item-count-5 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 3, July 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 3, July 2024 - Black Bin"
+															class="calendar-task-1">3</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 10, July 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 10, July 2024 - Blue Bin"
+															class="calendar-task-496">10</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 17, July 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 17, July 2024 - Black Bin"
+															class="calendar-task-1">17</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 24, July 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 24, July 2024 - Brown Bin"
+															class="calendar-task-495">24</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-5 past-date" tabindex="0"
+													title="Wednesday 31, July 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 31, July 2024 - Black Bin"
+															class="calendar-task-1">31</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="month-wrapper month-item-4 month-collapse month-8 month-even year-2024">
+									<h3 class="month">Aug 2024</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-4 item-count-4 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 7, August 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 7, August 2024 - Blue Bin"
+															class="calendar-task-496">7</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 14, August 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 14, August 2024 - Black Bin"
+															class="calendar-task-1">14</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 21, August 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 21, August 2024 - Brown Bin"
+															class="calendar-task-495">21</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 28, August 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 28, August 2024 - Black Bin"
+															class="calendar-task-1">28</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="month-wrapper month-item-5 month-collapse month-9 month-odd year-2024">
+									<h3 class="month">Sep 2024</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-4 item-count-4 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 4, September 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 4, September 2024 - Blue Bin"
+															class="calendar-task-496">4</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 11, September 2024">
+													<ul class="content">
+														<li tabindex="0"
+															title="Wednesday 11, September 2024 - Black Bin"
+															class="calendar-task-1">11</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 18, September 2024">
+													<ul class="content">
+														<li tabindex="0"
+															title="Wednesday 18, September 2024 - Brown Bin"
+															class="calendar-task-495">18</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 25, September 2024">
+													<ul class="content">
+														<li tabindex="0"
+															title="Wednesday 25, September 2024 - Black Bin"
+															class="calendar-task-1">25</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="month-wrapper month-item-6 month-collapse month-10 month-even year-2024">
+									<h3 class="month">Oct 2024</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-5 item-count-5 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 2, October 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 2, October 2024 - Blue Bin"
+															class="calendar-task-496">2</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 9, October 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 9, October 2024 - Black Bin"
+															class="calendar-task-1">9</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 16, October 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 16, October 2024 - Brown Bin"
+															class="calendar-task-495">16</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 23, October 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 23, October 2024 - Black Bin"
+															class="calendar-task-1">23</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-5 past-date" tabindex="0"
+													title="Wednesday 30, October 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 30, October 2024 - Blue Bin"
+															class="calendar-task-496">30</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="month-wrapper month-item-7 month-collapse month-11 month-odd year-2024">
+									<h3 class="month">Nov 2024</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-4 item-count-4 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 6, November 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 6, November 2024 - Black Bin"
+															class="calendar-task-1">6</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 13, November 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 13, November 2024 - Brown Bin"
+															class="calendar-task-495">13</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 20, November 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 20, November 2024 - Black Bin"
+															class="calendar-task-1">20</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 27, November 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 27, November 2024 - Blue Bin"
+															class="calendar-task-496">27</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="month-wrapper month-item-8 month-collapse month-12 month-even year-2024">
+									<h3 class="month">Dec 2024</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-4 item-count-4 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 4, December 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 4, December 2024 - Black Bin"
+															class="calendar-task-1">4</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 11, December 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 11, December 2024 - Brown Bin"
+															class="calendar-task-495">11</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 18, December 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 18, December 2024 - Black Bin"
+															class="calendar-task-1">18</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 25, December 2024">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 25, December 2024 - Blue Bin"
+															class="calendar-task-496">25</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="month-wrapper month-item-9 month-collapse month-1 month-odd year-2025">
+									<h3 class="month">Jan 2025</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-5 item-count-5 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 1, January 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 1, January 2025 - Black Bin"
+															class="calendar-task-1">1</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 8, January 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 8, January 2025 - Brown Bin"
+															class="calendar-task-495">8</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 15, January 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 15, January 2025 - Black Bin"
+															class="calendar-task-1">15</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 22, January 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 22, January 2025 - Blue Bin"
+															class="calendar-task-496">22</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-5 past-date" tabindex="0"
+													title="Wednesday 29, January 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 29, January 2025 - Black Bin"
+															class="calendar-task-1">29</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="month-wrapper month-item-10 month-collapse month-2 month-even year-2025">
+									<h3 class="month">Feb 2025</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-4 item-count-4 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 5, February 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 5, February 2025 - Brown Bin"
+															class="calendar-task-495">5</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 12, February 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 12, February 2025 - Black Bin"
+															class="calendar-task-1">12</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 19, February 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 19, February 2025 - Blue Bin"
+															class="calendar-task-496">19</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 26, February 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 26, February 2025 - Black Bin"
+															class="calendar-task-1">26</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="month-wrapper month-item-11 month-collapse month-3 month-odd year-2025">
+									<h3 class="month">Mar 2025</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-4 item-count-4 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 5, March 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 5, March 2025 - Brown Bin"
+															class="calendar-task-495">5</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 12, March 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 12, March 2025 - Black Bin"
+															class="calendar-task-1">12</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 19, March 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 19, March 2025 - Blue Bin"
+															class="calendar-task-496">19</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 26, March 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 26, March 2025 - Black Bin"
+															class="calendar-task-1">26</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="month-wrapper month-item-12 month-collapse month-4 month-even year-2025">
+									<h3 class="month">Apr 2025</h3>
+									<div class="calendar-wrapper">
+										<div class="calendar-table">
+											<div class="calendar-table-row day-count-4 item-count-4 ">
+												<div class="day-week">Wednesday</div>
+												<div class="calendar-table-cell day-cell-1 past-date" tabindex="0"
+													title="Wednesday 2, April 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 2, April 2025 - Brown Bin"
+															class="calendar-task-495">2</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-2 past-date" tabindex="0"
+													title="Wednesday 9, April 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 9, April 2025 - Black Bin"
+															class="calendar-task-1">9</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-3 past-date" tabindex="0"
+													title="Wednesday 16, April 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 16, April 2025 - Blue Bin"
+															class="calendar-task-496">16</li>
+													</ul>
+												</div>
+												<div class="calendar-table-cell day-cell-4 past-date" tabindex="0"
+													title="Wednesday 23, April 2025">
+													<ul class="content">
+														<li tabindex="0" title="Wednesday 23, April 2025 - Black Bin"
+															class="calendar-task-1">23</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="calendar-info">
+								<div class="calendar-info-left">
+									<ul class="calendar-services-count-3">
+										<li class="black-bin"><img
+												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAGkCAMAAAB3mwwMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3dpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4OWViN2I1Yi0wNDgzLTQ0YTctODQyYS00NTgxNmNiMGQ1ZjgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTA5Mjg3OTZGNEI4MTFFOUE0QjM5Qjg5M0RBMjZGMzQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTA5Mjg3OTVGNEI4MTFFOUE0QjM5Qjg5M0RBMjZGMzQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDplYjJhMDUyZi1iZjFmLTRkOGMtYjM3Zi05NDUwOTJiNWQ2MGYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5pZDo5ZmEwNWEyNy1kZTJjLTQwZmMtYTkwYy1iYjM5ZWRiNjg2NmQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7oOnJGAAABgFBMVEXq6uonJybFxcXl5eXt7e3S0tGkpKO9vbw2NjVbW1owMC8dHR2EhIMsLCra2tl7e3o6OjjJycklJSSMjIsxMTCbm5uUlJP09PQ8PDvCwsEqKijNzc1sbGu1tbVjY2Jzc3L8/Pze3t6urq2ysrFBQUAhISAqKir29vZUVFP6+vry8vI4ODf4+PhLS0owMDAaGhjc3Nyqqqk9PTzU1NQ8PDzg4OA/Pz67u7rj4+IbGxrW1ta4uLjw8PA0NDQ6OjoYGBgkJCMkJCIzMzIcHBsfHx4tLSw4ODhGRkU+Pj4uLi5DQ0I2NjYmJiYpKSdYWFcYGBdfX15ISEdvb294eHdQUE9oaGeAgH8vLy0uLiw1NTM0NDIuLi00NDO6urkwMC01NTK8vLvHx8fAwL/Y2NcvLyzQ0M/ExMMzMzG0tLM2NjOwsK+np6e3t7esrKvh4eGgoJ/v7+/39/eIiIePj4+YmJcpKSrk5OMjIyLb29vn5+fz8/PLy8v19fX5+fk3Nzb////tj2xzAAAAgHRSTlP/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ADgFS2cAACFMSURBVHja7N2LP9vs2wDwoqoyoQiqjLa6OZRntBuGx2PdOt5OzTlNlQ0j5jiHmWP967/7kGNbO0nlyufN9dmB0jb95rqPuZM47ux4UDhsAhvQBrQBbUA7bEAb0Aa0Ae2wAW1AG9AGtMMGtAFtQBvQDhvQBrQBbUA7bEAb0Aa0Ae2wAW1AG9AGtMMGtAFtQBvQDhvQBrQBbUA7bEAb0Aa0AX8W/u7em7Ee8z+gs/rw0tlzc3zr91sA8Pgwer2+MRp0NZyeLNe0t87v/dXr+/3+2+POq56xb2r0oGjqvO32/xGEc7e1a2Z2qbV9YbmqvrHBFdwpbQIMWFtTudjXNzeZCIUGQzSWBs4L/2738ZXTcXk+/CpwES2/Lt0Y3QnuuRrOzhob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"
+												alt="Black Bin"><span>Black Bin day</span></li>
+										<li class="blue-bin"><img
+												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT8AAAGkCAMAAABw2dIZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3dpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4OWViN2I1Yi0wNDgzLTQ0YTctODQyYS00NTgxNmNiMGQ1ZjgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NEU0N0YwN0JGNEI4MTFFOUE0QjM5Qjg5M0RBMjZGMzQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NEU0N0YwN0FGNEI4MTFFOUE0QjM5Qjg5M0RBMjZGMzQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDplYjJhMDUyZi1iZjFmLTRkOGMtYjM3Zi05NDUwOTJiNWQ2MGYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5pZDo5ZmEwNWEyNy1kZTJjLTQwZmMtYTkwYy1iYjM5ZWRiNjg2NmQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5ZFWkTAAABgFBMVEUEWJI2iMS10+d1YYvn5+cAaq0rh8OHtdYpfrrIx8cahsQAY6Rii6nT5PAAbbCqsLUMdbU3g7sTX5p0qtAdergsfrqFcp1nU3kHhMQVUIjF3OwAcLLz8/P6+/wRdrVBisMTTYMSSn7c3NsmfbnT09MaZqAVg8IaebcgercPVI6PcXvo8fdXl8YEcrMge7jf6/SoyeEVWpEAZqgjdrQFc7QAer6MjKmXp7FLTGdwU1spebakipZSP10Cf8AWeLZ7Xmgec7Mlc61ln8kHdLTv9fpKjsSqmbT2+Pmcwt0je7hcRk0BdbrOzcwNZaGRvNs3ZJgSfLoCcbINbKucgIsNf7/NvckgbagXcK27uLtAfagQT4cBX54tV3gQaafYztXc0tdZpdJSYYTm4eclebbJv9UxkchTOj7d1N0od7EOcbDR0M/BwcAdh8Tt7e7h2d4qe7cWhsQte7ZSkMIHcrIEdbgId7gGe7oOhsYuf7ohg8EGaKjY2Nfg4N8wfrn///////+95UvCAAAAgHRSTlP/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ADgFS2cAACdLSURBVHja7N2LQxrH1gBwISJEhIhAHiCShkS2lYcBktzShhKUAq3SYnITDTd9yO39NNGraJsQU/Bf/+a5O7MsCIZBx7snaaNGefxyZmd25uzsxKkZnxMTJoHpZ/qZfqafGaaf6Wf6mX5mmH6mn+ln+plh+pl+pp/pZ4bpZ/qZfqafGaaf6Wf6mX5mmH6mn+ln+pl+Zph+pp/pZ/qZYfqZfqaf6WeG6Wf6DR+hUKcjvV8nVFpdWkomXa5AwLocCI1Pz1WulsvLVmsg4HIll5aWVuXzA2/B7vV6CyBisdhRsXhkH0AQkJdKq0g9SeCtkAFCuOCXgMVqqRQK9dWrguezhMFTHh2B5y4UvIXykmR+1j8WP05NWSxh8Dbgf+D/xViVFwzB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"
+												alt="Blue Bin"><span>Blue Bin day</span></li>
+										<li class="brown-bin"><img
+												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAGkCAMAAAB3mwwMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3dpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4OWViN2I1Yi0wNDgzLTQ0YTctODQyYS00NTgxNmNiMGQ1ZjgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NEU0N0YwNzdGNEI4MTFFOUE0QjM5Qjg5M0RBMjZGMzQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NEU0N0YwNzZGNEI4MTFFOUE0QjM5Qjg5M0RBMjZGMzQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDplYjJhMDUyZi1iZjFmLTRkOGMtYjM3Zi05NDUwOTJiNWQ2MGYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5pZDo5ZmEwNWEyNy1kZTJjLTQwZmMtYTkwYy1iYjM5ZWRiNjg2NmQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7LBOxdAAABgFBMVEW2ejlnVjeydi/Hx8Xo6Oe1ekG1eTWibDDQr42uci/a2tjDfz1uaEmjai3bxK2YZi+0e0S3t7empqb9/PudaTDo18e7iFmEWitqbmjEfznCg0SrcC/AhEu5ei+LXC26hE/u4tbizbi1kGm3eTDDmXCneEWQkIrAiFRTVEPEfCy0fEi1eC+xpYt/dlPVuJz09PSscjrBfjLy6uGwdC/JpH61e0WcjnLV0MGMg1r28OqwdDyfm5X59fGzeUSNYC3Bs6Cig2C8di/6+fe2e0CHaD6kcDjIfjHCfj+xdj+jfFF9VSqxeEKsdz5MSTJlX0KOXSzAwMCnbjBZXla4dC+vfEXAhk+zcC6ktLirf03IlWHZv6RDR0CFVibCgj3fvJnAjl97XjRjZ2CucDatfEPJjk1AQS66ciaIWCiTYy6hoZ6EVyvPz85/gX22ez2vr66KWSvw8PC5gEJ1d3HPnmmweTe1gU2zs7KtrKyZbkDh4eCNVx2/eS7s7Oy0e0f///////9f1LBJAAAAgHRSTlP/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ADgFS2cAACYkSURBVHja7N2JfxLXvgBwGh2W6ACVxRpIAoLVgBJkScsEkghGieSqqPEprVLx3mdcaFLbuDxD8q+/s83MmQUCkQMc7vw+bUxiwvL1d+asc47t2IrvCptFYAFagBagBWiFBWgBWoAWoBUWoAVoAVqAVliAFqAFaAFaYQFagBagBWiFBWgBWoAWoBUWoAVoAVqAVliAFqAFaAFaYQFagBagBWjFVAP6fFMHeDRKv/Ls+7Nl3xHfgOViIZOJRCKBQDTqbqRS0cJpMukIxqC/lXHHL1/OOVMNdzQaCATAiyhyB1h2O//++/nz5tWrweBVFMFcb0Kfr1wsFguFDPgPsiP4lDvlTKVSjYbbLWOAvy8UisVy11IK+ILBYDi8iJ82uHP1ajOX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"
+												alt="Brown Bin"><span>Brown Bin day</span></li>
+									</ul>
+
+									<div class="reschedule-info">
+										<span><strong>Red</strong> denotes Collection Day change due to Bank Holiday.
+											Collections over the Christmas &amp; New Year period are subject to
+											change.</span>
+									</div>
+								</div>
+
+								<div class="calendar-info-right">
+									<div class="collection-info">
+										Please put your bins out before 7am on your collection day.
+									</div>
+
+									<div class="bad-weather">
+										During bad weather, visit: <a href="https://www.veolia.co.uk/sheffield"
+											target="_blank">www.veolia.co.uk/sheffield</a> for details of any
+										collection day changes.
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+						<style type="text/css">
+							* {
+								box-sizing: content-box !important;
+							}
+						</style>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="container-fluid">
+		<div class="container">
+			<p><a href="https://www.sheffield.gov.uk/home/bins-recycling-services">Back to
+					Bins homepage</a></p>
+		</div>
+		<script>
+			SETTINGS = {};
+			SETTINGS["MESSAGE_AREA"] = "message-area";  </script>
+
+		<div id="captcha-container"></div>
+
+		<script>
+			var captcha_callback = false, captcha_args = null;
+
+			var captcha_execute = function () {
+				grecaptcha.reset();
+				grecaptcha.execute();
+			};
+
+			var captcha_onload = function () {
+				grecaptcha.render('captcha-container', {
+					'sitekey': '6LfS5yYdAAAAAPTCkoZTDevVNoQ0Ar1u8qvDmooc',
+					'callback': 'captcha_submit',
+					'size': 'invisible'
+				});
+
+				captcha_execute();
+
+				$('form').each(function () {
+					var $form = $(this),
+						events = $._data($form[0]).events;
+
+					var submit_events = [];
+					for (var i = 0; i < events.submit.length; i++) {
+						submit_events.push(events.submit[i]['handler'].toString());
+					}
+
+					$form.data('submit-events', submit_events);
+
+					$form.off('submit').on('submit', function () {
+						captcha_args = $(this);
+						captcha_execute();
+						return false;
+					});
+
+					captcha_callback = function () {
+						if (captcha_args != null) {
+							var form_events = captcha_args.data('submit-events');
+							for (var i = 0; i < form_events.length; i++) {
+								var f;
+								eval('f = ' + form_events[i]);
+								if (typeof (f) == 'function') {
+									f();
+								}
+							}
+						}
+
+						captcha_args = null;
+					};
+				});
+
+
+			};
+
+			var captcha_submit = function (token) {
+				$.post('https://wasteservices.sheffield.gov.uk/grr', {
+					'g-recaptcha-response': token,
+					'location': 'property',
+					'checksum': 'a77307d8'
+				})
+					.always(function (data) {
+						if (typeof (data) != 'undefined') {
+							var obj = $.parseJSON(data);
+							if (obj['state'] == 1) {
+								if (obj['checksum'] == '1eab49b2') {
+									if (typeof (captcha_callback) == 'function') {
+										captcha_callback();
+									}
+								}
+							} else {
+								show_message('<strong>Please complete the captcha before proceeding</strong>');
+							}
+						}
+					});
+			};
+
+		</script>
+	</footer>
+</body>
+
+</html>

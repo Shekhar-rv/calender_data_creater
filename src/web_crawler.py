@@ -26,7 +26,7 @@ class WebCrawler:
         
     def save_html(self):
         page_source = self.driver.page_source
-        fileToWrite = open("page_source.html", "w")
+        fileToWrite = open("data/page_source.html", "w")
         fileToWrite.write(page_source)
         print("Saved the page source")
         fileToWrite.close()
@@ -46,7 +46,8 @@ class WebCrawler:
         wait = WebDriverWait(self.driver, 10)
         search_property = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#search_property.search-text.form-control")))
         # search_property = wait.until(EC.presence_of_element_located((By.NAME, "search_property")))
-        # search_property.click()
+        search_property.click()
+        search_property.clear()
         print(f"Is your postcode: {self.postcode}")
         search_property.send_keys(self.postcode)  # type: ignore
         print("Sent the postcode")
