@@ -1,7 +1,8 @@
-from typing import List
+from typing import Dict, List
 from web_crawler import WebCrawler
 from web_scraper import WebScraper
 from data_wrangler import DataWrangler
+from calendar_creater import CalendarCreator
 from os import environ
 
 HOUSE_NUMBER = environ.get('HOUSE_NUMBER', '')
@@ -39,3 +40,7 @@ def get_webscraper() -> WebScraper:
 
 def get_data_wrangler(calendar_data: List[str]) -> DataWrangler:
     return DataWrangler(calendar_data=calendar_data)
+
+
+def get_calendar_creater(data_dict: List[Dict]) -> CalendarCreator:
+    return CalendarCreator(data_dict=data_dict)

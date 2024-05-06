@@ -1,30 +1,40 @@
 from pandas import DataFrame
 import datetime
+from typing import List, Dict
 
-data_dict = [{'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2024, 5, 1, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 5, 8, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2024, 5, 15, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 5, 22, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2024, 5, 29, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 6, 5, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2024, 6, 12, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 6, 19, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2024, 6, 26, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 7, 3, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2024, 7, 10, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 7, 17, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2024, 7, 24, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 7, 31, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2024, 8, 7, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 8, 14, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2024, 8, 21, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 8, 28, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2024, 9, 4, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 9, 11, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2024, 9, 18, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 9, 25, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2024, 10, 2, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 10, 9, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2024, 10, 16, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 10, 23, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {
-    'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2024, 10, 30, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 11, 6, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2024, 11, 13, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 11, 20, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2024, 11, 27, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 12, 4, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2024, 12, 11, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2024, 12, 18, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2024, 12, 25, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2025, 1, 1, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2025, 1, 8, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2025, 1, 15, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2025, 1, 22, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2025, 1, 29, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2025, 2, 5, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2025, 2, 12, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2025, 2, 19, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2025, 2, 26, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2025, 3, 5, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2025, 3, 12, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2025, 3, 19, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2025, 3, 26, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Brown Bin', 'start_date': datetime.datetime(2025, 4, 2, 0, 0), 'description': 'Take out the Brown Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2025, 4, 9, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Blue Bin', 'start_date': datetime.datetime(2025, 4, 16, 0, 0), 'description': 'Take out the Blue Bin before 7AM on Wednesday!'}, {'subject': 'Take out the Black Bin', 'start_date': datetime.datetime(2025, 4, 23, 0, 0), 'description': 'Take out the Black Bin before 7AM on Wednesday!'}]
 
-df = DataFrame(data_dict)
-df["end_date"] = df['start_date']
-# df["start_date"] = df['start_date'] - datetime.timedelta(days=1) # type: ignore
-df["start_time"] = "12:00 AM"
-df["end_time"] = "11:59 PM"
-df["all_day_event"] = "True"
-df["location"] = "Home"
-df["private"] = "True"
+class CalendarCreator:
+    def __init__(self, data_dict: List[Dict]):
+        self.df = DataFrame(data_dict)
 
-df = df.rename(columns={
-    'subject': 'Subject',
-    'start_date': 'Start Date',
-    'start_time': 'Start Time',
-    'end_date': 'End Date',
-    'end_time': 'End Time',
-    'all_day_event': 'All Day Event',
-    'description': 'Description',
-    'location': 'Location',
-    'private': 'Private'
-})
+    def create_calendar(self):
+        self.df["end_date"] = self.df['start_date']
+        self.df["start_time"] = "12:00 AM"
+        self.df["end_time"] = "11:59 PM"
+        self.df["all_day_event"] = "True"
+        self.df["location"] = "Home"
+        self.df["private"] = "True"
+        print("Added all additional columns to the DataFrame.")
+    
+    def rename_columns(self):
+        self.df = self.df.rename(columns={
+            'subject': 'Subject',
+            'start_date': 'Start Date',
+            'start_time': 'Start Time',
+            'end_date': 'End Date',
+            'end_time': 'End Time',
+            'all_day_event': 'All Day Event',
+            'description': 'Description',
+            'location': 'Location',
+            'private': 'Private'
+        })
+        print("Renamed all columns in the DataFrame.")
 
-print(df)
+    def save_calendar(self):
+        self.df.to_csv("output/calendar_data.csv", index=False)
+        print("Saved the calendar data to a CSV file.")
 
-df.to_csv("output/calendar_data.csv", index=False)
+    def run(self):
+        self.create_calendar()
+        self.rename_columns()
+        self.save_calendar()
