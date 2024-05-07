@@ -26,7 +26,7 @@ class WebCrawler:
         
     def save_html(self):
         page_source = self.driver.page_source
-        fileToWrite = open("data/page_source.html", "w")
+        fileToWrite = open("data/page_source2.html", "w")
         fileToWrite.write(page_source)
         print("Saved the page source")
         fileToWrite.close()

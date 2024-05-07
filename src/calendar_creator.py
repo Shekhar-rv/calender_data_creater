@@ -1,17 +1,18 @@
 from pandas import DataFrame
-import datetime
+from datetime import timedelta
 from typing import List, Dict
 
 
 class CalendarCreator:
-    def __init__(self, data_dict: List[Dict]):
+    def __init__(self, data_dict: List[Dict]): # type: ignore
         self.df = DataFrame(data_dict)
 
     def create_calendar(self):
         self.df["end_date"] = self.df['start_date']
-        self.df["start_time"] = "12:00 AM"
-        self.df["end_time"] = "11:59 PM"
-        self.df["all_day_event"] = "True"
+        self.df["start_date"] = self.df['start_date'] - timedelta(days=1) # type: ignore
+        self.df["start_time"] = "5:00 PM"
+        self.df["end_time"] = "7:00 AM"
+        self.df["all_day_event"] = "False"
         self.df["location"] = "Home"
         self.df["private"] = "True"
         print("Added all additional columns to the DataFrame.")
