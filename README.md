@@ -12,6 +12,6 @@ The aim of this project was to remind me which days and which bins do I need to 
     ```
 
 ## To Do
-1. Get the selenium crawler working, as of now I have manually saved the html file and scraped from that.
+1. Get the selenium crawler working, as of now I have manually saved the html file and scraped from that. Need to bypass recapta!
 2. Write tests for possible function.
 3. Check test coverage.
